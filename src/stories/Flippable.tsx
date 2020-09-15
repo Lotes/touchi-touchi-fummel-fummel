@@ -27,7 +27,7 @@ export const Flippable: React.FC<FlippableProps> = ({
   isFront = true,
   timeToFlipInMilliseconds = 800
 }) => {
-  const [stateIsFront, setStateIsFront] = useState(isFront);
+  const [stateIsFront, setStateIsFront] = useState(() => isFront);
   return (
     <div className="flippable-container"
       onClick={() => {
