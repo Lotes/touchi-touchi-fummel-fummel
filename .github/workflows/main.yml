@@ -14,6 +14,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v2.3.2
       - name: Setup
-        run: yarn install && git config user.name "Storybook bot"
+        run: yarn install && git config --global user.name "Storybook bot"
       - name: Deploy
         run: yarn run deploy-storybook -- --ci
