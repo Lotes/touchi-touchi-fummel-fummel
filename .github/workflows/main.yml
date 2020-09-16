@@ -8,10 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1.4.3
-      - name: Setup git
-        run: git config user.name "Storybook bot" && git config user.email "storybook-bot@example.com"
+      - name: Checkout repo
+        run: git clone git@github.com:Lotes/touchi-touchi-fummel-fummel.git
       - name: Yarn install
         run: yarn install
       - name: Deploy
