@@ -2,6 +2,7 @@ import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Flippable, FlipAxis, FlippableProps } from './Flippable';
+import { Front, Back } from './Placeholders';
 
 export default {
   title: 'Touchi/Flippable',
@@ -16,8 +17,8 @@ XAxis.args = {
   width: "200px",
   height: "200px",
   timeToFlipInMilliseconds: 500,
-  front: (<div style={{ backgroundColor: "red" }}></div>),
-  back: (<div style={{ backgroundColor: "blue" }}></div>)
+  front: (<Front />),
+  back: (<Back />)
 };
 
 export const YAxis = Template.bind({});
@@ -26,6 +27,6 @@ YAxis.args = {
   width: "200px",
   height: "200px",
   timeToFlipInMilliseconds: 500,
-  front: (<div style={{ backgroundColor: "red" }}></div>),
-  back: (<div style={{ backgroundColor: "blue" }}></div>)
+  front: (<Front />),
+  back: (<Back />)
 };

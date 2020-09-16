@@ -1,0 +1,16 @@
+.placeholder {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 36px;
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  position: relative;
+}
+
+.placeholder-text {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
