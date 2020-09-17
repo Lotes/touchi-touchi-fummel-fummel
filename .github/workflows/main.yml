@@ -1,0 +1,19 @@
+name: Deploy storybook
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: Lotes:${{ secrets.GH_TOKEN }}
+    steps:
+      - uses: actions/setup-node@v1.4.3
+      - name: Checkout repo
+        uses: actions/checkout@v2.3.2
+      - name: Setup
+        run: yarn install
+      - name: Deploy
+        run: yarn run deploy-storybook -- --ci
