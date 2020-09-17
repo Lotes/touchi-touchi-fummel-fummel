@@ -41,6 +41,7 @@ export const Flippable: React.FC<FlippableProps> = ({
       }}>
       <div className="flippable-inner" style={{
         transform: `${stateIsFront ? "" : "rotate" + (axis === FlipAxis.XAxis ? "X" : "Y") + "(180deg)"}`,
+        webkitTransform: `${stateIsFront ? "" : "rotate3d(" + (axis === FlipAxis.XAxis ? "1, 0, 0" : "0, 1, 0")+", 180deg)"}`,
         transition: `transform ${timeToFlipInMilliseconds}ms`
       }}>
         <div className="flippable-front">{front}</div>
